@@ -1,0 +1,16 @@
+<?php
+/**
+ * @var $block \OrviSoft\Reevoo\Block\Product\View\Reviews
+ */
+$_helper = $block->getHelper();
+if($_helper->isEnabled()):
+	$_product = $block->getCurrentProduct();
+	$attributeToCall = $_helper->geAttribute();
+	$sku_value = $_product->getData($attributeToCall);
+?>
+<div id="customer-reviews-reevoo">
+	<div class="box-collateral box-reviews" id="customer-reviews">
+		<reevoo-embedded-product-reviews  trkref="<?php echo $_helper->getPartner() ?>" sku="<?php echo $sku_value; ?>" per-page="<?php echo $_helper->gePerPage() ?>"></reevoo-embedded-product-reviews>
+	</div>
+</div>
+<?php endif; ?>

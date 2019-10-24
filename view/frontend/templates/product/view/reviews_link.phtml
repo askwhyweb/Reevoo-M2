@@ -1,0 +1,18 @@
+<?php
+/**
+ * @var $block \OrviSoft\Reevoo\Block\Product\View\Reviews
+ */
+$_helper = $block->getHelper();
+if($_helper->isEnabled()):
+	$_product = $block->getCurrentProduct();
+	$attributeToCall = $_helper->geAttribute();
+    $sku_value = $_product->getData($attributeToCall);
+    //$sku_value = substr($sku_value, 0, strpos($sku_value, "-"));
+
+?>
+<div id="reevoo-reviews-link">
+    <span class="revoo-col">
+		<a class="reevoomark" href="https://mark.reevoo.com/partner/<?php echo $_helper->getPartner() ?>/series:<?php echo $sku_value; ?>">Read reviews</a> 
+    </span>
+</div>
+<?php endif; ?>

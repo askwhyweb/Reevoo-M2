@@ -1,0 +1,12 @@
+<?php
+/**
+ * @var $block \OrviSoft\Reevoo\Block\Product\List\Reviews
+ */
+$_helper = $block->getHelper();
+if($_helper->isEnabled()):
+?>
+<div>
+	<?= $block->displayReviews() ?>
+	<?= __('Hello OrviSoft_Reevoo::product/list/reviews.phtml') ?>
+</div>
+<?php endif; ?>

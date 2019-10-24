@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+	<body>
+		<referenceContainer name="before.body.end">
+			<block as="revoo_js" after="-" class="OrviSoft\Reevoo\Block\Js" name="js" template="OrviSoft_Reevoo::javascript.phtml" ifconfig="revoo/option/enable" />
+		</referenceContainer>
+	</body>
+</page>

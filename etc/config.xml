@@ -1,0 +1,35 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+	<default>
+		<revoo>
+			<option>
+				<enable>0</enable>
+				<attribute>sku</attribute>
+				<per_page>10</per_page>
+				<partner_id/>
+			</option>
+			<feed_settings>
+				<enable>0</enable>
+				<feed_path>local</feed_path>
+				<ftp_host/>
+				<ftp_user/>
+				<ftp_pass/>
+			</feed_settings>
+			<cronjob>
+				<frequency>D</frequency>
+				<time>12,20,00</time>
+			</cronjob>
+		</revoo>
+		<crontab>
+			<default>
+				<jobs>
+					<revoo_feed_job>
+						<schedule>
+							<cron_expr>0 12 * * *</cron_expr>
+						</schedule>
+					</revoo_feed_job>
+				</jobs>
+			</default>
+		</crontab>
+	</default>
+</config>
