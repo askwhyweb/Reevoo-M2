@@ -7,12 +7,12 @@
 			<resource>OrviSoft_Reevoo::config_orvisoft_reevoo</resource>
 			<group id="option" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label">
 				<label>Reevoo Core Settings</label>
-				<field id="enable" showInDefault="1" showInStore="0" showInWebsite="0" sortOrder="10" translate="label" type="select">
+				<field id="enable" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="select">
 					<label>Enable</label>
 					<comment>Enable/ Disable module.</comment>
 					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
 				</field>
-				<field id="attribute" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="select">
+				<field id="attribute" showInDefault="1" showInStore="0" showInWebsite="0" sortOrder="20" translate="label" type="select">
 					<label>Select Attribute</label>
 					<comment>Select SKU or product unique identifier (e.g. MPN or something)</comment>
 					<source_model>OrviSoft\Reevoo\Model\Config\Source\Attribute</source_model>
@@ -20,16 +20,32 @@
 						<field id="revoo/option/enable">1</field>
 					</depends>
 				</field>
-				<field id="per_page" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="text">
+				<field id="per_page" showInDefault="1" showInStore="0" showInWebsite="0" sortOrder="30" translate="label" type="text">
 					<label>Per Page Reviews</label>
 					<comment>Per page reviews by Reevoo on product page (default is 10)</comment>
 					<depends>
 						<field id="revoo/option/enable">1</field>
 					</depends>
 				</field>
-				<field id="partner_id" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="text">
+				<field id="partner_id" showInDefault="1" showInStore="0" showInWebsite="0" sortOrder="40" translate="label" type="text">
 					<label>Account Code</label>
 					<comment>Account ID is also known as TRKREF, this is to be provided by Reevoo.</comment>
+					<depends>
+						<field id="revoo/option/enable">1</field>
+					</depends>
+				</field>
+				<field id="enable_product_feed" showInDefault="1" showInStore="0" showInWebsite="0" sortOrder="50" translate="label" type="select">
+					<label>Enable Product Feed</label>
+					<comment>Enable/ Disable product feed.</comment>
+					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+					<depends>
+						<field id="revoo/option/enable">1</field>
+					</depends>
+				</field>
+				<field id="enable_purchaser_feed" showInDefault="1" showInStore="0" showInWebsite="0" sortOrder="50" translate="label" type="select">
+					<label>Enable Purchaser Feed</label>
+					<comment>Enable/ Disable purchaser feed.</comment>
+					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
 					<depends>
 						<field id="revoo/option/enable">1</field>
 					</depends>
@@ -45,7 +61,7 @@
 						<field id="revoo/option/enable">1</field>
 					</depends>
 				</field>
-				<field id="feed_path" showInDefault="1" showInStore="0" showInWebsite="0" sortOrder="10" translate="label" type="select">
+				<field id="feed_path" showInDefault="1" showInStore="0" showInWebsite="0" sortOrder="20" translate="label" type="select">
 					<label>Feed Path</label>
 					<comment>Feed path, local should save feeds in var/revoo_feed/mm-dd-yyyy.csv</comment>
 					<source_model>OrviSoft\Reevoo\Model\Config\Source\FeedPath</source_model>
@@ -54,27 +70,27 @@
 						<field id="revoo/feed_settings/enable">1</field>
 					</depends>
 				</field>
-				<field id="ftp_host" showInDefault="1" showInStore="0" showInWebsite="0" sortOrder="10" translate="label" type="text">
-					<label>FTP Host</label>
-					<comment>FTP Host where you want to upload</comment>
+				<field id="ftp_host" showInDefault="1" showInStore="0" showInWebsite="0" sortOrder="30" translate="label" type="text">
+					<label>sFTP Host</label>
+					<comment>sFTP Host where you want to upload</comment>
 					<depends>
 						<field id="revoo/option/enable">1</field>
 						<field id="revoo/feed_settings/enable">1</field>
 						<field id="revoo/feed_settings/feed_path">ftp</field>
 					</depends>
 				</field>
-				<field id="ftp_user" showInDefault="1" showInStore="0" showInWebsite="0" sortOrder="10" translate="label" type="text">
-					<label>FTP User</label>
-					<comment>Username for FTP</comment>
+				<field id="ftp_user" showInDefault="1" showInStore="0" showInWebsite="0" sortOrder="40" translate="label" type="text">
+					<label>sFTP User</label>
+					<comment>Username for sFTP</comment>
 					<depends>
 						<field id="revoo/option/enable">1</field>
 						<field id="revoo/feed_settings/enable">1</field>
 						<field id="revoo/feed_settings/feed_path">ftp</field>
 					</depends>
 				</field>
-				<field id="ftp_pass" showInDefault="1" showInStore="0" showInWebsite="0" sortOrder="10" translate="label" type="text">
-					<label>FTP Password</label>
-					<comment>Password for FTP</comment>
+				<field id="ftp_pass" showInDefault="1" showInStore="0" showInWebsite="0" sortOrder="50" translate="label" type="text">
+					<label>sFTP Password</label>
+					<comment>Password for sFTP</comment>
 					<depends>
 						<field id="revoo/option/enable">1</field>
 						<field id="revoo/feed_settings/enable">1</field>

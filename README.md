@@ -46,17 +46,21 @@ This module serves the easy to use integration for Reevoo in Magento 2. Though t
 
  - Partner ID (revoo/option/partner_id)
 
- - Enable (revoo/feed_settings/enable)
+ - Enable Product Feed (revoo/option/enable_product_feed)
+
+ - Enable Purchaser Feed (revoo/option/enable_purchaser_feed)
+
+ - Enable Feeds (revoo/feed_settings/enable)
 
  - Feed Path (revoo/feed_settings/feed_path)
 
- - FTP Host (revoo/feed_settings/ftp_host)
+ - sFTP Host (revoo/feed_settings/ftp_host)
 
- - FTP User (revoo/feed_settings/ftp_user)
+ - sFTP User (revoo/feed_settings/ftp_user)
 
- - FTP Password (revoo/feed_settings/ftp_pass)
+ - sFTP Password (revoo/feed_settings/ftp_pass)
 
- - Freequency (revoo/cronjob/frequency)
+ - Cronjob Freequency (revoo/cronjob/frequency)
 
  - Start Time (revoo/cronjob/time)
 
@@ -68,6 +72,7 @@ This module serves the easy to use integration for Reevoo in Magento 2. Though t
 
  - Helper
 	- OrviSoft\Reevoo\Helper\Productreviews
+	- OrviSoft\Reevoo\Helper\Feed
 
  - Block
 	- Product\View\Reviews > product/view/reviews.phtml

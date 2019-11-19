@@ -1,6 +1,6 @@
 {
     "name": "orvisoft/module-reevoo",
-    "description": "",
+    "description": "This module serves the easy to use integration for Reevoo in Magento 2. Though this is not an official integration provided by Reevoo, but you can get its fully integration based on this module on fly.",
     "type": "magento2-module",
     "license": "proprietary",
     "authors": [

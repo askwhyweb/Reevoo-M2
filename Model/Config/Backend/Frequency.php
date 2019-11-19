@@ -59,9 +59,9 @@ class Frequency extends \Magento\Framework\App\Config\Value
      */
     public function afterSave()
     {
-        $time = $this->getData('groups/revoo_cronjob_time/fields/time/value');
-        $frequency = $this->getData('groups/revoo_cronjob_time/fields/frequency/value');
-
+        $time = $this->getData('groups/cronjob/fields/time/value');
+        $frequency = $this->getData('groups/cronjob/fields/frequency/value');
+        
         $cronExprArray = [
             intval($time[1]), //Minute
             intval($time[0]), //Hour

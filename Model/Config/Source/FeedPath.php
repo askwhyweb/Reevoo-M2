@@ -8,11 +8,11 @@ class FeedPath implements \Magento\Framework\Option\ArrayInterface
 
     public function toOptionArray()
     {
-        return [['value' => 'local', 'label' => __('Local')],['value' => 'ftp', 'label' => __('FTP')]];
+        return [['value' => 'local', 'label' => __('Local')],['value' => 'ftp', 'label' => __('sFTP')]];
     }
 
     public function toArray()
     {
-        return ['local' => __('Local'),'ftp' => __('FTP')];
+        return ['local' => __('Local'),'ftp' => __('sFTP')];
     }
 }
