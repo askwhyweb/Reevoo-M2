@@ -36,7 +36,7 @@ class Productfeed extends \Magento\Framework\App\Action\Action
      */
     public function execute()
     {
-        $this->_helper->generateProductFeed();
+        $this->_helper->generateProductFeed(true);
     }
 
 
